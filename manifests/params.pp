@@ -66,7 +66,7 @@ class elasticsearch::params {
   case $::kernel {
     'Linux': {
       $elasticsearch_user  = 'elasticsearch'
-      $elasticsearch_group = 'elasticsearch'
+      $elasticsearch_group = 'service'
     }
     'Darwin': {
       $elasticsearch_user  = 'elasticsearch'

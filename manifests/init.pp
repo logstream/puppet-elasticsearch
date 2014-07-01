@@ -260,6 +260,15 @@ class elasticsearch(
 
   #### Manage actions
 
+  user { "$elasticsearch_user":
+    ensure => present,
+    comment => "elasticsearch user",
+    password => "!!",
+    groups => ["$elasticsearch_group"],
+    shell => "/bin/bash",
+    managehome => false,
+  }
+
   # package(s)
   class { 'elasticsearch::package': }
 
