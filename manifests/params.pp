@@ -99,9 +99,9 @@ class elasticsearch::params {
       $configdir   = '/etc/elasticsearch'
       $package_dir = '/opt/elasticsearch/swdl'
       $installpath = '/opt/elasticsearch'
-      $plugindir   = '/usr/share/elasticsearch/plugins'
-      $plugintool  = '/usr/share/elasticsearch/bin/plugin'
-      $datadir     = '/usr/share/elasticsearch/data'
+      $plugindir   = '/opt/elasticsearch/plugins'
+      $plugintool  = '/opt/elasticsearch/bin/plugin'
+      $datadir     = '/opt/elasticsearch/data'
     }
     default: {
       fail("\"${module_name}\" provides no config directory default value
